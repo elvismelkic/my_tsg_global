@@ -44,7 +44,11 @@ defmodule MyTsgGlobal.MixProject do
       {:telemetry_poller, "~> 0.4"},
       {:gettext, "~> 0.11"},
       {:jason, "~> 1.0"},
-      {:plug_cowboy, "~> 2.0"}
+      {:plug_cowboy, "~> 2.0"},
+      {:ecto_enum, "~> 1.4"},
+      {:csv, "~> 2.4"},
+      {:timex, "~> 3.0"},
+      {:accent, "~> 1.1"}
     ]
   end
 
@@ -57,7 +61,7 @@ defmodule MyTsgGlobal.MixProject do
   defp aliases do
     [
       setup: ["deps.get", "ecto.setup", "cmd npm install --prefix assets"],
-      "ecto.setup": ["ecto.create", "ecto.migrate", "run priv/repo/seeds.exs"],
+      "ecto.setup": ["ecto.create", "ecto.migrate"],
       "ecto.reset": ["ecto.drop", "ecto.setup"],
       test: ["ecto.create --quiet", "ecto.migrate --quiet", "test"]
     ]
