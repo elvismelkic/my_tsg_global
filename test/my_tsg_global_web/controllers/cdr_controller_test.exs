@@ -1,5 +1,5 @@
-defmodule AppWeb.CdrControllerTest do
-  use AppWeb.ConnCase
+defmodule MyTsgGlobalWeb.CdrControllerTest do
+  use MyTsgGlobalWeb.ConnCase
 
   @create_attrs %{
     destination_number: "some destination_number",

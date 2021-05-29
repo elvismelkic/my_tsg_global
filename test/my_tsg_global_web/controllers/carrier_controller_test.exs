@@ -1,5 +1,5 @@
-defmodule AppWeb.CarrierControllerTest do
-  use AppWeb.ConnCase
+defmodule MyTsgGlobalWeb.CarrierControllerTest do
+  use MyTsgGlobalWeb.ConnCase
 
   describe "index" do
     test "lists all carriers", %{conn: conn} do

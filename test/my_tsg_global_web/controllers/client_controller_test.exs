@@ -1,5 +1,5 @@
 defmodule AppWeb.ClientControllerTest do
-  use AppWeb.ConnCase
+  use MyTsgGlobalWeb.ConnCase
 
   describe "index" do
     test "lists all clients", %{conn: conn} do
