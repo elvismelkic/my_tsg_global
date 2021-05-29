@@ -25,6 +25,7 @@ defmodule MyTsgGlobalWeb.ConnCase do
       import MyTsgGlobalWeb.ConnCase
 
       alias MyTsgGlobalWeb.Router.Helpers, as: Routes
+      alias MyTsgGlobal.TestHelper
 
       # The default endpoint for testing
       @endpoint MyTsgGlobalWeb.Endpoint

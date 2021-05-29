@@ -19,6 +19,7 @@ defmodule MyTsgGlobal.DataCase do
   using do
     quote do
       alias MyTsgGlobal.Repo
+      alias MyTsgGlobal.TestHelper
 
       import Ecto
       import Ecto.Changeset
