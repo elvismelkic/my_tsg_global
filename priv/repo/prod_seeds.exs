@@ -34,13 +34,6 @@ sell_rates =
   |> CSV.decode!(headers: true)
   |> Enum.to_list()
 
-cdrs =
-  "#{csv_folder_path}cdrs.csv"
-  |> Path.expand(__DIR__)
-  |> File.stream!()
-  |> CSV.decode!(headers: true)
-  |> Enum.to_list()
-
 carriers =
   buy_rates
   |> Stream.map(fn buy_rate -> buy_rate["carrier_name"] end)
@@ -132,7 +125,7 @@ query =
 
 sell_rates = query |> Repo.all() |> Repo.preload(:client)
 
-new_cdrs = [
+cdrs = [
   %{
     "carrier" => "Carrier C",
     "client_code" => "BIZ00",
@@ -208,7 +201,7 @@ new_cdrs = [
 ]
 
 cdrs =
-  Enum.map(cdrs ++ new_cdrs, fn cdr ->
+  Enum.map(cdrs, fn cdr ->
     buy_rate_id =
       buy_rates
       |> Enum.find(fn buy_rate ->
